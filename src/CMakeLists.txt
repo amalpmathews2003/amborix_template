@@ -1,0 +1,22 @@
+# Main executable
+add_executable(${PROJECT_NAME} main.c)
+
+
+file(GLOB SOURCES CONFIGURE_DEPENDS
+    "${CMAKE_SOURCE_DIR}/*.c"
+)
+list(REMOVE_ITEM SOURCES "${CMAKE_SOURCE_DIR}/main.c")
+
+
+set(LIB_NAME "${PROJECT_NAME}_shared")
+
+
+add_library(${LIB_NAME} SHARED ${SOURCES})
+set_target_properties(${LIB_NAME} PROPERTIES 
+    PREFIX "" 
+    OUTPUT_NAME ${PROJECT_NAME}
+)
+
+
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
+install(TARGETS ${LIB_NAME} LIBRARY DESTINATION lib/amx/${PROJECT_NAME})
