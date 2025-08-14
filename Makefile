@@ -7,7 +7,6 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=$(PROJECT_NAME)
 PKG_RELEASE:=1
 
-SOURCE_DIR:=$(pwd)
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk

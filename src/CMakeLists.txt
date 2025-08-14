@@ -3,9 +3,9 @@ add_executable(${PROJECT_NAME} main.c)
 
 
 file(GLOB SOURCES CONFIGURE_DEPENDS
-    "${CMAKE_SOURCE_DIR}/*.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.c"
 )
-list(REMOVE_ITEM SOURCES "${CMAKE_SOURCE_DIR}/main.c")
+list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/main.c")
 
 
 set(LIB_NAME "${PROJECT_NAME}_shared")
