@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "prpl-project",
+            "includePath": [
+                "~/amal/prpl/prplos/staging_dir/target-*/usr/include",
+                "~/amal/prpl/prplos/staging_dir/toolchain-*/include",
+                "${workspaceFolder}/**"
+            ],
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11"
+        }
+    ],
+    "version": 4
+}
